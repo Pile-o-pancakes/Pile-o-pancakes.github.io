@@ -1,10 +1,13 @@
 const body = document.getElementById("body");
 
 const paletteButtonBackground = document.getElementById("paletteButtonBackground");
-const paletteButtonFont = document.getElementById("paletteButtonFont");
-
 const paletteBackgroundBox = document.getElementById("paletteBackgroundBox");
-const paletteFontBox = document.getElementById("paletteFontBox");
+
+const paletteWhiteBG = document.getElementById("paletteWhiteBG");
+const paletteRedBG = document.getElementById("paletteRedBG");
+const paletteYellowBG = document.getElementById("paletteYellowBG");
+const paletteGreyBG = document.getElementById("paletteGreyBG");
+
 
 function togglePaletteBGBox() {
 
@@ -18,20 +21,16 @@ function togglePaletteBGBox() {
     }
 }
 
-function togglePaletteFontBox() {
+function changeBGColor(event) {
 
-    if(paletteFontBox.style.visibility == "hidden") {
-
-        paletteFontBox.style.visibility = "visible";
-    }
-    else {
-    
-        paletteFontBox.style.visibility = "hidden";
-    }
+    body.style = event.style.cssText;
 }
 
 paletteButtonBackground.onclick = togglePaletteBGBox;
-paletteButtonFont.onclick = togglePaletteFontBox;
+paletteWhiteBG.onclick = (e) => changeBGColor(e.target);
+paletteRedBG.onclick = (e) => changeBGColor(e.target);
+paletteYellowBG.onclick = (e) => changeBGColor(e.target);
+paletteGreyBG.onclick = (e) => changeBGColor(e.target);
 
 /*TODO:
 1. knappar för att öppna färgpalett, ändra färg på bakgrund och text

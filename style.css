@@ -1,8 +1,21 @@
 body {
-    background-color:whitesmoke;
     font-family: 'Courier New', Courier, monospace;
     display: grid;
     grid-template-columns: 1fr 30% 30% 1fr;
+}
+
+article {
+    background-color: beige;
+    padding: 16px;
+    border-radius: 10px;
+    border-style:ridge;
+}
+
+button {
+    background-color: cadetblue;
+    border-radius: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: large;
 }
 
 #title {
@@ -13,17 +26,20 @@ body {
     grid-column: 2;
 }
 
-#allPalettes {
-    grid-column: 3;
-    margin: 16px;
-    position: sticky;
+#paletteButtonBackground {
+    justify-self: center;
+    align-self: center;
+    min-width: 60%;
+    min-height: 40%;
 }
 
 .palette {
     display: flex;
     justify-content: space-around;
     background-color:bisque;
-    border-color: crimson;
+    grid-column: 3;
+    border-style: groove;
+    border-color: black;
     margin: 16px;
     padding: 16px;
     width: 80%;
@@ -31,32 +47,7 @@ body {
 }
 
 .paletteBox {
-    background-color: blueviolet;
     border-style: solid;
     width: 32px;
     height: 32px;
-}
-
-#paletteRedBG {
-    background-color: red;
-}
-
-#paletteYellowBG {
-    background-color: yellow;
-}
-
-#paletteGreyBG {
-    background-color: grey;
-}
-
-#paletteRedFont {
-    background-color: red;
-}
-
-#paletteYellowFont {
-    background-color: yellow;
-}
-
-#paletteGreyFont {
-    background-color: grey;
 }
