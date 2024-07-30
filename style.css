@@ -1,3 +1,62 @@
 body {
-    background-color: blue;
+    background-color:whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    display: grid;
+    grid-template-columns: 1fr 30% 30% 1fr;
+}
+
+#title {
+    grid-column: 2;
+}
+
+#introduction {
+    grid-column: 2;
+}
+
+#allPalettes {
+    grid-column: 3;
+    margin: 16px;
+    position: sticky;
+}
+
+.palette {
+    display: flex;
+    justify-content: space-around;
+    background-color:bisque;
+    border-color: crimson;
+    margin: 16px;
+    padding: 16px;
+    width: 80%;
+    height: auto;
+}
+
+.paletteBox {
+    background-color: blueviolet;
+    border-style: solid;
+    width: 32px;
+    height: 32px;
+}
+
+#paletteRedBG {
+    background-color: red;
+}
+
+#paletteYellowBG {
+    background-color: yellow;
+}
+
+#paletteGreyBG {
+    background-color: grey;
+}
+
+#paletteRedFont {
+    background-color: red;
+}
+
+#paletteYellowFont {
+    background-color: yellow;
+}
+
+#paletteGreyFont {
+    background-color: grey;
 }
