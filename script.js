@@ -21,19 +21,9 @@ function togglePaletteBGBox() {
     }
 }
 
-function changeBGColor(event) {
-
-    body.style = event.style.cssText;
-}
-
 paletteButtonBackground.onclick = togglePaletteBGBox;
-paletteWhiteBG.onclick = (e) => changeBGColor(e.target);
-paletteRedBG.onclick = (e) => changeBGColor(e.target);
-paletteYellowBG.onclick = (e) => changeBGColor(e.target);
-paletteGreyBG.onclick = (e) => changeBGColor(e.target);
 
-/*TODO:
-1. knappar för att öppna färgpalett, ändra färg på bakgrund och text
-2. bilder av något, dunno
-3. använd något roligt API
-*/
+paletteWhiteBG.onclick = (e) => body.style = e.target.style.cssText;
+paletteRedBG.onclick = (e) => body.style = e.target.style.cssText;
+paletteYellowBG.onclick = (e) => body.style = e.target.style.cssText;
+paletteGreyBG.onclick = (e) => body.style = e.target.style.cssText;

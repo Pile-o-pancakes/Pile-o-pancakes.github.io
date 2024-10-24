@@ -1,29 +1,86 @@
+:root {
+    --buttonColor: cadetblue;
+    --backgroundColor_1: whitesmoke;
+    --distanceSmall: 8px;
+    --distanceMedium: 16px;
+    --distanceLarge: 32px;
+    --distanceHuge: 64px;
+
+    --miniBoxWidth: 2rem;
+    --miniBoxHeight: 2rem;
+    --smallBoxWidth: 8rem;
+    --smallBoxHeight: 8rem;
+    --mediumBoxWidth: 32rem;
+    --mediumBoxHeight: 32rem;
+    --largeBoxWidth: 64rem;
+    --largeBoxHeight: 64rem;
+}
+
 body {
+    background-color: var(--backgroundColor_1);
     font-family: 'Courier New', Courier, monospace;
     display: grid;
     grid-template-columns: 1fr 30% 30% 1fr;
 }
 
+a:link {
+    text-decoration: none;
+}
+
 article {
     background-color: beige;
-    padding: 16px;
-    border-radius: 10px;
-    border-style:ridge;
+    border-radius: var(--distanceMedium);
+    border-style: ridge;
 }
 
 button {
-    background-color: cadetblue;
-    border-radius: 10px;
+    background-color: var(--buttonColor);
+    border-radius: var(--distanceMedium);;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: large;
+}
+
+@keyframes extendBox {
+    from { width: var(--miniBoxWidth); height: var(--miniBoxHeight); color: rgba(0, 0, 0, 0); }
+    to { width: var(--mediumBoxWidth); height: var(--smallBoxHeight); color: rgba(0, 0, 0, 255); }
+}
+
+.githubBox {
+    background-color: var(--buttonColor);
+    padding: var(--distanceMedium);
+    border-radius: var(--distanceMedium);
+    display: flex;
+    flex-direction: column;
+    color: rgba(0, 0, 0, 0);
+    width: var(--miniBoxWidth);
+    height: var(--miniBoxHeight);
+    transition: all 0.5s ease;
+}
+
+.githubBox:hover {
+    animation-name: extendBox;
+    animation-duration: 0.5s;
+    color: rgba(0, 0, 0, 255);
+    width: var(--mediumBoxWidth);
+    height: var(--smallBoxHeight);
+}
+
+#githubLogo {
+    align-self: auto;
+    display: flex;
+    justify-content: center;
+    min-width: var(--miniBoxWidth);
+    min-height: var(--miniBoxHeight);
 }
 
 #title {
     grid-column: 2;
 }
 
-#introduction {
+#reposBox {
     grid-column: 2;
+    padding: var(--distanceMedium);
+    height: 16rem;
 }
 
 #paletteButtonBackground {
@@ -40,14 +97,15 @@ button {
     grid-column: 3;
     border-style: groove;
     border-color: black;
-    margin: 16px;
-    padding: 16px;
+    margin: var(--distanceMedium);
+    padding: var(--distanceMedium);
     width: 80%;
     height: auto;
 }
 
-.paletteBox {
+.paletteButton {
     border-style: solid;
-    width: 32px;
-    height: 32px;
+    border-radius: 50%;
+    width: var(--distanceLarge);
+    height: var(--distanceLarge);
 }
